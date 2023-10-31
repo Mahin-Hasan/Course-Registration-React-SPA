@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "course_title": "JavaScript Fundamentals",
+        "course_details": "Introduction to JavaScript, covering basics and fundamentals of the language.",
+        "price": 4999,
+        "credit": 3,
+        "img": "https://i.ibb.co/gz572ZM/Rectangle-2-2.png"
+    },
+    {
+        "id": 2,
+        "course_title": "React.js Masterclass",
+        "course_details": "Advanced React.js concepts and hands-on projects for mastering React development.",
+        "price": 7999,
+        "credit": 5,
+        "img": "https://i.ibb.co/3fX6jD2/Rectangle-2-3.png"
+    },
+    {
+        "id": 3,
+        "course_title": "Python for Data Science",
+        "course_details": "Python essentials and its applications in data science and analytics.",
+        "price": 6499,
+        "credit": 4,
+        "img": "https://i.ibb.co/LY2mgd0/Rectangle-2-4.png"
+    },
+    {
+        "id": 4,
+        "course_title": "Full Stack Web Development",
+        "course_details": "Comprehensive course covering front-end, back-end, and databases for web development.",
+        "price": 9999,
+        "credit": 7,
+        "img": "https://i.ibb.co/WP4S9CW/Rectangle-3.png"
+    },
+    {
+        "id": 5,
+        "course_title": "Java Programming Basics",
+        "course_details": "Fundamentals of Java programming language with hands-on exercises.",
+        "price": 5499,
+        "credit": 4,
+        "img": "https://i.ibb.co/GFN93BN/Rectangle-2.png"
+    },
+    {
+        "id": 6,
+        "course_title": "C++ Programming Essentials",
+        "course_details": "Essential concepts and syntax of C++ programming language for beginners.",
+        "price": 5999,
+        "credit": 4,
+        "img": "https://i.ibb.co/SNLwGVc/Rectangle-2-5.png"
+    },
+    {
+        "id": 7,
+        "course_title": "Data Structures and Algorithms",
+        "course_details": "In-depth coverage of common data structures and algorithmic concepts.",
+        "price": 7499,
+        "credit": 6,
+        "img": "https://i.ibb.co/ph1HQn3/Rectangle-3-1.png"
+    },
+    {
+        "id": 8,
+        "course_title": "Machine Learning Foundations",
+        "course_details": "Introduction to machine learning concepts and applications.",
+        "price": 8999,
+        "credit": 6,
+        "img": "https://i.ibb.co/qn3fnnD/Rectangle-2-1.png"
+    },
+    {
+        "id": 9,
+        "course_title": "Cybersecurity Basics",
+        "course_details": "Fundamentals of cybersecurity and best practices in securing systems.",
+        "price": 6999,
+        "credit": 5,
+        "img": "https://i.ibb.co/rb4WDvd/Rectangle-2-6.png"
+    }
+]
