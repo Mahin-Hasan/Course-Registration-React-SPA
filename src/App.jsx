@@ -9,6 +9,7 @@ function App() {
   const [courseNames, setCourseNames] = useState([]);
   const [totalCredits, setTotalCredits] = useState(0);
   const [creditHours, setCreditHours] = useState(20);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const handleAddCourseToEnrollment = course => {
     //dont accept course that are already added validation
@@ -20,8 +21,10 @@ function App() {
 
     //credit validation
     let count = course.credit;
+    let updatedPrice = course.price;
     courseNames.forEach((item) => {
       count = count + item.credit;
+      updatedPrice = updatedPrice + item.price;
     })
     if (count > 20) {
       return alert('Cannot take more than 20 credits');
@@ -30,15 +33,13 @@ function App() {
     //credit remaining validation
     let creditRemaining = 20 - count;
     if (creditRemaining < 0) {
-      return alert('No Remaining Credits');
+      return alert('No Credits Remaining');
     }
-
 
     setCourseNames(newCourses);
     setTotalCredits(totalCredits + course.credit);
     setCreditHours(creditRemaining);
-
-
+    setTotalPrice(updatedPrice);
   }
 
   return (
@@ -55,6 +56,7 @@ function App() {
             courseNames={courseNames}
             creditHours={creditHours}
             totalCredits={totalCredits}
+            totalPrice={totalPrice}
           ></Enrollments>
         </div>
       </div>

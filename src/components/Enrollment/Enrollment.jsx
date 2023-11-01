@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types';
+
 
 const Enrollment = ({ courseName, idx }) => {
     const { course_title } = courseName;
-    // let count = 0;
     return (
         <div>
             <ul>
@@ -11,4 +12,8 @@ const Enrollment = ({ courseName, idx }) => {
     );
 };
 
+Enrollment.propTypes = {
+    courseName: PropTypes.object,
+    idx:PropTypes.number
+}
 export default Enrollment;
