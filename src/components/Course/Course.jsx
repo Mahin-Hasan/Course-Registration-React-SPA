@@ -1,6 +1,6 @@
 
-const Course = ({course}) => {
-    const {img, course_title, course_details,price,credit}=course;
+const Course = ({ course, handleAddCourseToEnrollment }) => {
+    const { img, course_title, course_details, price, credit } = course;
     return (
         <div className="border border-1 rounded-xl p-3 space-y-4">
             <img className="w-full" src={img} />
@@ -10,7 +10,7 @@ const Course = ({course}) => {
                 <p className="text-zinc-400">Price: {price}</p>
                 <p className="text-zinc-400">Credit: {credit}</p>
             </div>
-            <button className="bg-sky-500 w-full py-2 text-white font-bold text-2xl rounded-lg">Select</button>
+            <button onClick={() => handleAddCourseToEnrollment(course)} className="bg-sky-500 w-full py-2 text-white font-bold text-2xl rounded-lg">Select</button>
         </div>
     );
 };
