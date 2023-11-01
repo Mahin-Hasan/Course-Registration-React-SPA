@@ -1,12 +1,12 @@
 import Enrollment from "../Enrollment/Enrollment";
 
-const Enrollments = ({ courseNames, totalCredits }) => {
+const Enrollments = ({ courseNames, creditHours,totalCredits }) => {
     // console.log(courseNames);
     // console.log(totalCredits);
     return (
         <div className="bg-gray-100 rounded-xl ml-4">
             <div className="mx-3 py-3 space-y-3">
-                <h2 className="text-sky-500 font-bold text-lg">Credit Hour Remaining 7 hr</h2>
+                <h2 className="text-sky-500 font-bold text-lg">Credit Hour Remaining {creditHours} hr</h2>
                 <hr />
                 <h2 className="font-bold text-lg">Course Name</h2>
                 {

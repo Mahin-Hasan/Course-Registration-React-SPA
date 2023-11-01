@@ -8,21 +8,38 @@ function App() {
 
   const [courseNames, setCourseNames] = useState([]);
   const [totalCredits, setTotalCredits] = useState(0);
+  const [creditHours, setCreditHours] = useState(20);
 
   const handleAddCourseToEnrollment = course => {
-    // console.log('test',course);
+    //dont accept course that are already added validation
     const isExist = courseNames.find((item) => item.id === course.id);
-    if (isExist) {//truthy check
+    if (isExist) {
       return alert('Course Already Added');
     }
     const newCourses = [...courseNames, course];
-    setCourseNames(newCourses);
 
-    //credit
+    //credit validation
+    let count = course.credit;
+    courseNames.forEach((item) => {
+      count = count + item.credit;
+    })
+    if (count > 20) {
+      return alert('Cannot take more than 20 credits');
+    }
+
+    //credit remaining validation
+    let creditRemaining = 20 - count;
+    if (creditRemaining < 0) {
+      return alert('No Remaining Credits');
+    }
+
+
+    setCourseNames(newCourses);
     setTotalCredits(totalCredits + course.credit);
+    setCreditHours(creditRemaining);
+
+
   }
-  // console.log(totalCredits);
-  console.log(courseNames);
 
   return (
     <>
@@ -36,6 +53,7 @@ function App() {
         <div className='lg:w-[300px] xl:w-[350px]'>
           <Enrollments
             courseNames={courseNames}
+            creditHours={creditHours}
             totalCredits={totalCredits}
           ></Enrollments>
         </div>
